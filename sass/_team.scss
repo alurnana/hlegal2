@@ -1,0 +1,47 @@
+.team {
+    &_block {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(400px, auto));
+
+        img {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px; 
+        }
+    }
+
+    &_info {
+        padding: 30px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px; 
+        background-color: #F5F5FA;
+    }
+
+    &_name {
+        font-weight: 700;
+        color: #B3B3BA;
+    }
+
+    &_job {
+        margin-top: 6px;
+        color: #B3B3BA;
+        font-size: 14px;
+    }
+}
+
+.common_link {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #24A3FF;
+    margin-bottom: 5px;
+}
+
+.common_title {
+    margin-bottom: 30px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+    background: linear-gradient(90deg, rgba(240, 20, 90, 1), rgba(239, 128, 128, 1));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

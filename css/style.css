@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  padding: 60px;
+}
+
+.team_block {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, auto));
+}
+.team_block img {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+.team_info {
+  padding: 30px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: #F5F5FA;
+}
+.team_name {
+  font-weight: 700;
+  color: #B3B3BA;
+}
+.team_job {
+  margin-top: 6px;
+  color: #B3B3BA;
+  font-size: 14px;
+}
+
+.common_link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #24A3FF;
+  margin-bottom: 5px;
+}
+
+.common_title {
+  margin-bottom: 30px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+  background: linear-gradient(90deg, rgb(240, 20, 90), rgb(239, 128, 128));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.public_title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+@media (min-width: 375px) {
+  .wrapper {
+    padding: 30px;
+  }
+  .team_block {
+    grid-template-columns: repeat(1, minmax(315px, auto));
+  }
+  .team_block img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 12px;
+  }
+  .team_info {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  .team_title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 60px;
+  }
+  .team_block {
+    grid-template-columns: 1fr;
+  }
+  .team_block img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 12px;
+  }
+  .team_info {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
+  }
+  .team_title {
+    font-size: 38px;
+  }
+  .common_link {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .team_block {
+    grid-template-columns: repeat(2, minmax(400px, auto));
+  }
+  .team_block img {
+    height: 100%;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 0;
+  }
+  .team_info {
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .team_block img {
+    max-height: 344px;
+  }
+}
+@media (min-width: 1920px) {
+  .wrapper {
+    padding: 60px 160px;
+  }
+  .team_block img {
+    max-height: 300px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

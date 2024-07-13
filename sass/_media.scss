@@ -1,0 +1,101 @@
+@media (min-width: 375px) {
+    .wrapper {
+        padding: 30px;  
+    }
+    
+    .team {
+        &_block {
+            grid-template-columns: repeat(1, minmax(315px, auto));
+            
+            img {
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 12px;
+            }
+        }
+
+        &_info {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 12px; 
+            border-bottom-left-radius: 12px;
+        }
+
+        &_title {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        padding: 60px;
+    }
+
+    .team {
+        &_block {
+            grid-template-columns: 1fr;
+            
+            img {
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 12px;
+            }
+        }
+
+        &_info {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 12px;
+        }
+
+        &_title {
+            font-size: 38px;
+        }
+    }
+
+    .common_link {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .team {
+        &_block {
+            grid-template-columns: repeat(2, minmax(400px, auto));
+            
+            img {
+                height: 100%;
+                border-bottom-left-radius: 12px;
+                border-top-right-radius: 0;
+            }
+        }
+
+        &_info {
+            border-top-right-radius: 12px;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .team_block {
+        img { 
+            max-height: 344px;
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .wrapper {
+        padding: 60px 160px;
+    }
+
+    .team_block {
+        img { 
+            max-height: 300px;
+        }
+    }
+}
