@@ -63,10 +63,59 @@ li {
   -webkit-text-fill-color: transparent;
 }
 
+.public {
+  background-color: #F5F5FA;
+}
 .public_title {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+.public_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.public_card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.public .card_img {
+  width: 100%;
+}
+.public .card_info {
+  padding: 30px;
+}
+.public .card_title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #24A3FF;
+}
+.public .card_date {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #B3B3BA;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+.public .card_text {
+  padding-top: 15px;
+  font-size: 14px;
+  line-height: 1.7;
+  position: relative;
+}
+.public .card_text::before {
+  content: "";
+  position: absolute;
+  background-color: #E6E6F0;
+  height: 4px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 @media (min-width: 375px) {
@@ -88,8 +137,11 @@ li {
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
   }
-  .team_title {
+  .common_title {
     font-size: 30px;
+  }
+  .public_cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (min-width: 768px) {
@@ -110,11 +162,26 @@ li {
     border-top-right-radius: 0;
     border-bottom-left-radius: 12px;
   }
-  .team_title {
-    font-size: 38px;
-  }
   .common_link {
     font-size: 14px;
+  }
+  .common_title {
+    font-size: 38px;
+  }
+  .public_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card_img {
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .public_card:nth-child(3) {
+    grid-column: 1/-1;
+  }
+  .public_card:nth-child(3) img {
+    object-fit: cover;
+    overflow: hidden;
   }
 }
 @media (min-width: 1024px) {
@@ -129,6 +196,12 @@ li {
   .team_info {
     border-top-right-radius: 12px;
     border-bottom-left-radius: 0;
+  }
+  .public_cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .public_card:nth-child(3) {
+    grid-column: auto;
   }
 }
 @media (min-width: 1440px) {

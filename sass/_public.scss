@@ -1,7 +1,65 @@
 .public {
+    background-color: #F5F5FA;
+
     &_title {
         display: flex;
         flex-direction: column;
         gap: 5px;
+    }
+
+    &_cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    &_card {
+        background-color: #fff;
+        border-radius: 12px; 
+        overflow: hidden;
+    }
+
+    .card {
+        &_img {
+            width: 100%;
+        }
+
+        &_info {
+            padding: 30px;
+        }
+
+        &_title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #24A3FF;
+        }
+
+        &_date {
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #B3B3BA;
+            text-transform: uppercase;
+            margin: 15px 0;
+        }
+
+        &_text {
+            padding-top: 15px;
+            font-size: 14px;
+            line-height: 1.7;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-color: #E6E6F0;
+                height: 4px;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 3;
+            }
+        }
     }
 }
